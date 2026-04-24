@@ -2,28 +2,41 @@ import React from 'react';
 import { useState } from "react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
+import ReactLogo from "../assets/React.svg";
+import TailwindLogo from "../assets/Tailwind-CSS.svg";
+import JavaScriptLogo from "../assets/JavaScript.svg";
+import D3Logo from "../assets/D3.js.svg";
+
+import PythonLogo from "../assets/Python.svg";
+import FastAPILogo from "../assets/FastAPI.svg";
+import MySQLLogo from "../assets/MySQl.svg";
+import AWSLogo from "../assets/AWS.svg";
+
+import PandasLogo from "../assets/Pandas.svg";
+import NumPyLogo from "../assets/NumPy.svg";
+
 
 export default function Home() {
 
   const [activeTab, setActiveTab] = useState("backend");
 
   const backendSkills = [
-    { icon: "src/assets/Python.svg", title: "Python"},
-    { icon: "src/assets/FastAPI.svg", title: "FastAPI"},
-    { icon: "src/assets/MySQL.svg", title: "MySQL"},
-    { icon: "src/assets/AWS.svg", title: "AWS"},
+    { icon: PythonLogo, title: "Python"},
+    { icon: FastAPILogo, title: "FastAPI"},
+    { icon: MySQLLogo, title: "MySQL"},
+    { icon: AWSLogo, title: "AWS"},
   ];
 
   const dataSkills = [
-    { icon: "src/assets/Pandas.svg", title: "Pandas"},
-    { icon: "src/assets/NumPy.svg", title: "NumPy"}
+    { icon: PandasLogo, title: "Pandas"},
+    { icon: NumPyLogo, title: "NumPy"}
   ];
 
   const frontendSkills = [
-    { icon: "src/assets/React.svg", title: "React"},
-    { icon: "src/assets/Tailwind-CSS.svg", title: "Tailwind"},
-    { icon: "src/assets/JavaScript.svg", title: "JavaScript"},
-    { icon: "src/assets/D3.js.svg", title: "D3.js"},
+    { icon: ReactLogo, title: "React"},
+    { icon: TailwindLogo, title: "Tailwind"},
+    { icon: JavaScriptLogo, title: "JavaScript"},
+    { icon: D3Logo, title: "D3.js"},
   ]
 
 
