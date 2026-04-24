@@ -15,6 +15,10 @@ import AWSLogo from "../assets/AWS.svg";
 import PandasLogo from "../assets/Pandas.svg";
 import NumPyLogo from "../assets/NumPy.svg";
 
+import GitHubLogo from "../assets/GitHubLogo.png";
+import LinkedInLogo from "../assets/LinkedInLogo.png";
+import LeetCodeLogo from "../assets/LeetcodeLogo.png";
+
 
 export default function Home() {
 
@@ -53,9 +57,9 @@ export default function Home() {
 
         {/* Click Logos and Resume */}
         <div className="flex flex-row gap-5 items-center pt-3">
-          <img src="src/assets/GitHubLogo.png" alt="GitHub Logo" className="w-12 h-12 rounded-full object-cover cursor-pointer transition duration-200 hover:scale-110 hover:opacity-80"/>
-          <img src="src/assets/LinkedInLogo.png" alt="LinkedIn Logo" className="w-12 h-12 rounded-full object-cover cursor-pointer transition duration-200 hover:scale-110 hover:opacity-80"/>
-          <img src="src/assets/LeetCodeLogo.png" alt="LeetCode Logo" className="w-12 h-12 rounded-full object-cover cursor-pointer transition duration-200 hover:scale-110 hover:opacity-80"/>
+          <img src={GitHubLogo} alt="GitHub Logo" className="w-12 h-12 rounded-full object-cover cursor-pointer transition duration-200 hover:scale-110 hover:opacity-80"/>
+          <img src={LinkedInLogo} alt="LinkedIn Logo" className="w-12 h-12 rounded-full object-cover cursor-pointer transition duration-200 hover:scale-110 hover:opacity-80"/>
+          <img src={LeetCodeLogo} alt="LeetCode Logo" className="w-12 h-12 rounded-full object-cover cursor-pointer transition duration-200 hover:scale-110 hover:opacity-80"/>
           <span>or</span>
           <button className="bg-gray-500 h-12 p-2 rounded pl-4 pr-4">Download Resume</button>
         </div>
