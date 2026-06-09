@@ -58,7 +58,12 @@ export default function Home() {
       
       {/* Welcome Section - Text */}
       <div className="flex flex-col gap-3 w-full">
-        <h1 className="text-5xl">Everett Lopez</h1>
+        <h1 className="text-5xl font-semibold mb-4"
+          style={{
+            color: "#f9fafb",
+            fontFamily: "'Geist', 'Inter', sans-serif",
+            letterSpacing: "-0.02em",
+          }}>Everett Lopez</h1>
         <span className="text-3xl">Backend Engineer • Python | FastAPI | SQL | AWS</span>
 
         {/* Click Logos and Resume */}
@@ -89,7 +94,7 @@ export default function Home() {
           src="https://lottie.host/ff3c0e89-af15-4b69-a0bb-a4c9f4278687/fg2wRiqJN7.lottie"
           loop
           autoplay
-          className="w-65 h-65 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]"
+          className="w-70 h-70 sm:w-80 sm:h-80 md:w-100 md:h-100 lg:w-[500px] lg:h-[500px]"
         />
       </div>
 
@@ -102,10 +107,15 @@ export default function Home() {
       {/* About Section - Text */}
       <div className="flex flex-col gap-4 w-full md:w-2/3 lg:w-1/2">
         <div class="h-1 w-16 bg-white"></div>
-        <span className="text-3xl sm:text-4xl md:text-5xl font-semibold">About Me</span>
+        <span className="text-5xl font-semibold mb-4"
+          style={{
+            color: "#f9fafb",
+            fontFamily: "'Geist', 'Inter', sans-serif",
+            letterSpacing: "-0.02em",
+          }}>About Me</span>
 
         <span className="text-base sm:text-lg md:text-xl leading-relaxed">Backend engineering-focused Computer Science student with hands-on experience in <span className="font-bold">FastAPI</span>, <span className="font-bold">Python</span>, <span className="font-bold">React</span>, and <span className="font-bold">TypeScript</span>. Skilled in building secure authentication systems, clean REST APIs, and reliable full-stack application flows. Known for debugging complex issues, maintaining clean project structure, and delivering modern, minimal UI implementations with Tailwind CSS.</span>
-        <span className="text-base sm:text-lg md:text-xl pt-2 cursor-pointer hover:opacity-80 transition">Learn More</span>
+        {/* <span className="text-base sm:text-lg md:text-xl pt-2 cursor-pointer hover:opacity-80 transition">Learn More</span> */}
       </div>
     </div>
 
@@ -114,7 +124,12 @@ export default function Home() {
 
       <div className="flex flex-col gap-3 w-[800pxpxpx] justify-center items-center">
         <div className="flex-grow h-1 w-20 bg-white"></div>
-        <span className="text-[36px] pb-[10px]">Skills</span>
+        <span className="text-5xl font-semibold mb-4"
+          style={{
+            color: "#f9fafb",
+            fontFamily: "'Geist', 'Inter', sans-serif",
+            letterSpacing: "-0.02em",
+          }}>Skills</span>
 
         {/* Tab Buttons for Skills */}
         <div className="flex gap-4 mb-10">
@@ -164,8 +179,68 @@ export default function Home() {
                        px-4 sm:px-5 md:px-6 
                        py-2 sm:py-3 
                        rounded-full flex items-center 
-                       text-black hover:bg-gray-300">Learn More</span>
-          <a href="https://chatexpress.tech" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
+                       text-black hover:bg-gray-300">Live Demo</span>
+          <a href="/chat-express"><span className="bg-gray-700 
+                         px-4 sm:px-5 md:px-6 
+                         py-2 sm:py-3 
+                         rounded-full flex items-center 
+                         border-2 border-solid 
+                         hover:bg-white hover:text-black">Learn More</span></a>
+        </div>
+
+        <div>
+          
+        </div>
+
+      </div>
+
+      {/* Card */}
+      <div className="bg-gray-700 rounded-lg flex flex-col 
+                  items-center justify-start 
+                  bg-cover bg-center 
+                  hover:bg-gray-700 transition duration-300 
+                  text-white gap-4 
+                  pt-10 sm:pt-14 md:pt-16 
+                  h-[400px] sm:h-[500px] md:h-[600px] cursor-pointer text-center">
+        <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Learning Management System (LMS)</span>
+        <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
+
+        <div className="flex flex-row gap-4 pt-2">
+          <span className="bg-white 
+                       px-4 sm:px-5 md:px-6 
+                       py-2 sm:py-3 
+                       rounded-full flex items-center 
+                       text-black hover:bg-gray-300">Live Demo</span>
+          <a href="/lms-canvas" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
+                         px-4 sm:px-5 md:px-6 
+                         py-2 sm:py-3 
+                         rounded-full flex items-center 
+                         border-2 border-solid 
+                         hover:bg-white hover:text-black">Learn More</span></a>
+        </div>
+        
+      </div>
+
+
+
+      {/* Card */}
+      <div className="bg-gray-700 rounded-lg flex flex-col 
+                  items-center justify-start 
+                  bg-cover bg-center 
+                  hover:bg-gray-700 transition duration-300 
+                  text-white gap-4 
+                  pt-10 sm:pt-14 md:pt-16 
+                  h-[400px] sm:h-[500px] md:h-[600px] cursor-pointer">
+        <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Spotify Intelligence Dashboard</span>
+        <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
+
+        <div className="flex flex-row gap-4 pt-2">
+          <a href="https://youtu.be/93Bo9WEG_w0?si=a69XuwtJFgK6nAds" target="_blank" rel="noopener noreferrer"><span className="bg-white 
+                       px-4 sm:px-5 md:px-6 
+                       py-2 sm:py-3 
+                       rounded-full flex items-center 
+                       text-black hover:bg-gray-300">Live Demo</span></a>
+          <a href="https://dataviscourse2025.github.io/final-project-treblemakers/" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
                          px-4 sm:px-5 md:px-6 
                          py-2 sm:py-3 
                          rounded-full flex items-center 
@@ -182,70 +257,16 @@ export default function Home() {
                   text-white gap-4 
                   pt-10 sm:pt-14 md:pt-16 
                   h-[400px] sm:h-[500px] md:h-[600px] cursor-pointer">
-        <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Learning Management System (LMS)</span>
+        <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Fraudlent Exploratory Data Analaysis (EDA)</span>
         <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
 
         <div className="flex flex-row gap-4 pt-2">
-          <span className="bg-white 
+          <a href="https://www.kaggle.com/code/everettlopez/credit-fraud-eda" target="_blank" rel="noopener noreferrer"><span className="bg-white 
                        px-4 sm:px-5 md:px-6 
                        py-2 sm:py-3 
                        rounded-full flex items-center 
-                       text-black hover:bg-gray-300">Learn More</span>
-          <a href="https://db-111.coe.utah.edu/" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
-                         px-4 sm:px-5 md:px-6 
-                         py-2 sm:py-3 
-                         rounded-full flex items-center 
-                         border-2 border-solid 
-                         hover:bg-white hover:text-black">Website</span></a>
-        </div>
-      </div>
-
-
-
-      {/* Card */}
-      <div className="bg-gray-700 rounded-lg flex flex-col 
-                  items-center justify-start 
-                  bg-cover bg-center 
-                  hover:bg-gray-700 transition duration-300 
-                  text-white gap-4 
-                  pt-10 sm:pt-14 md:pt-16 
-                  h-[400px] sm:h-[500px] md:h-[600px] cursor-pointer">
-        <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Learning Management System (LMS)</span>
-        <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
-
-        <div className="flex flex-row gap-4 pt-2">
-          <span className="bg-white 
-                       px-4 sm:px-5 md:px-6 
-                       py-2 sm:py-3 
-                       rounded-full flex items-center 
-                       text-black hover:bg-gray-300">Learn More</span>
-          <a href="https://db-111.coe.utah.edu/" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
-                         px-4 sm:px-5 md:px-6 
-                         py-2 sm:py-3 
-                         rounded-full flex items-center 
-                         border-2 border-solid 
-                         hover:bg-white hover:text-black">Website</span></a>
-        </div>
-      </div>
-
-      {/* Card */}
-      <div className="bg-gray-700 rounded-lg flex flex-col 
-                  items-center justify-start 
-                  bg-cover bg-center 
-                  hover:bg-gray-700 transition duration-300 
-                  text-white gap-4 
-                  pt-10 sm:pt-14 md:pt-16 
-                  h-[400px] sm:h-[500px] md:h-[600px] cursor-pointer">
-        <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Learning Management System (LMS)</span>
-        <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
-
-        <div className="flex flex-row gap-4 pt-2">
-          <span className="bg-white 
-                       px-4 sm:px-5 md:px-6 
-                       py-2 sm:py-3 
-                       rounded-full flex items-center 
-                       text-black hover:bg-gray-300">Learn More</span>
-          <a href="https://db-111.coe.utah.edu/" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
+                       text-black hover:bg-gray-300">Learn More</span></a>
+          <a href="https://www.kaggle.com/writeups/everettlopez/credit-fraud-eda" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
                          px-4 sm:px-5 md:px-6 
                          py-2 sm:py-3 
                          rounded-full flex items-center 
@@ -262,11 +283,17 @@ export default function Home() {
 
 function SkillCard({ icon, title }) {
   return (
-    <div className="flex flex-col items-center p-4 rounded-xl bg-gray-500 w-[200px] h-[300px] items-center justify-evenly
-                    hover:bg-gray-700 transition duration-300 
-                    hover:scale-105 hover:shadow-xl cursor-pointer">
-      <img src={icon} className="w-[150px] h-[150px] mb-2"/>
-      <p className="text-white font-semibold text-[32px]">{title}</p>
+    <div className="
+      flex flex-col items-center justify-evenly
+      p-4 rounded-xl bg-gray-500 
+      hover:bg-gray-700 hover:scale-105 hover:shadow-xl transition duration-300 cursor-pointer
+
+      w-[150px] h-[220px]          /* default: small for mobile */
+      sm:w-[180px] sm:h-[260px]    /* small tablets */
+      md:w-[200px] md:h-[300px]    /* full size on desktop */
+    ">
+      <img src={icon} className="w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] md:w-[150px] md:h-[150px] mb-2"/>
+      <p className="text-white font-semibold text-[20px] sm:text-[26px] md:text-[32px] text-center">{title}</p>
     </div>
   )
 }
