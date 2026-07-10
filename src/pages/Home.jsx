@@ -22,6 +22,7 @@ import LinkedInLogo from "../assets/LinkedInLogo.png";
 import LeetCodeLogo from "../assets/LeetcodeLogo.png";
 
 import VisualProjectBackground from "../assets/VisualProject.png";
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -170,7 +171,7 @@ export default function Home() {
                   hover:bg-gray-700 transition duration-300 
                   text-white gap-4 
                   pt-10 sm:pt-14 md:pt-16 
-                  h-[400px] sm:h-[500px] md:h-[600px] cursor-pointer">
+                  h-[400px] sm:h-[500px] md:h-[600px]">
         <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Full-Stack Messaging Application</span>
         <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
 
@@ -180,12 +181,12 @@ export default function Home() {
                        py-2 sm:py-3 
                        rounded-full flex items-center 
                        text-black hover:bg-gray-300">Live Demo</span>
-          <a href="/chat-express"><span className="bg-gray-700 
+          <Link to="/chat-express"><span className="bg-gray-700 
                          px-4 sm:px-5 md:px-6 
                          py-2 sm:py-3 
                          rounded-full flex items-center 
                          border-2 border-solid 
-                         hover:bg-white hover:text-black">Learn More</span></a>
+                         hover:bg-white hover:text-black">Learn More</span></Link>
         </div>
 
         <div>
@@ -201,7 +202,7 @@ export default function Home() {
                   hover:bg-gray-700 transition duration-300 
                   text-white gap-4 
                   pt-10 sm:pt-14 md:pt-16 
-                  h-[400px] sm:h-[500px] md:h-[600px] cursor-pointer text-center">
+                  h-[400px] sm:h-[500px] md:h-[600px] text-center">
         <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Learning Management System (LMS)</span>
         <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
 
@@ -211,12 +212,12 @@ export default function Home() {
                        py-2 sm:py-3 
                        rounded-full flex items-center 
                        text-black hover:bg-gray-300">Live Demo</span>
-          <a href="/lms-canvas" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
+          <Link to="/lms-canvas" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
                          px-4 sm:px-5 md:px-6 
                          py-2 sm:py-3 
                          rounded-full flex items-center 
                          border-2 border-solid 
-                         hover:bg-white hover:text-black">Learn More</span></a>
+                         hover:bg-white hover:text-black">Learn More</span></Link>
         </div>
         
       </div>
@@ -230,7 +231,7 @@ export default function Home() {
                   hover:bg-gray-700 transition duration-300 
                   text-white gap-4 
                   pt-10 sm:pt-14 md:pt-16 
-                  h-[400px] sm:h-[500px] md:h-[600px] cursor-pointer">
+                  h-[400px] sm:h-[500px] md:h-[600px]">
         <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Spotify Intelligence Dashboard</span>
         <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
 
