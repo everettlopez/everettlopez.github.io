@@ -1,29 +1,20 @@
+import { TypeAnimation } from 'react-type-animation';
+
 import React from 'react';
 import { useState } from "react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-
-import ReactLogo from "../assets/React.svg";
-import TailwindLogo from "../assets/Tailwind-CSS.svg";
-import JavaScriptLogo from "../assets/JavaScript.svg";
-import TypeScriptLogo from "../assets/TypeScript.svg";
-import D3Logo from "../assets/D3.js.svg";
-
-import PythonLogo from "../assets/Python.svg";
-import FastAPILogo from "../assets/FastAPI.svg";
-import MySQLLogo from "../assets/MySQl.svg";
-import AWSLogo from "../assets/AWS.svg";
-
-import PandasLogo from "../assets/Pandas.svg";
-import NumPyLogo from "../assets/NumPy.svg";
-import MatplotlibLogo from "../assets/Matplotlib.svg";
-
-import GitHubLogo from "../assets/GitHubLogo.png";
-import LinkedInLogo from "../assets/LinkedInLogo.png";
-import LeetCodeLogo from "../assets/LeetcodeLogo.png";
-
-import VisualProjectBackground from "../assets/VisualProject.png";
 import { Link } from "react-router-dom";
-
+import sampleHeadshot from "../assets/sample_headshot.jpg";
+import PythonLogo from "../assets/Python.svg";
+import PandasLogo from "../assets/Pandas.svg";
+import ReactLogo from "../assets/react.svg";
+import FastAPILogo from "../assets/FastAPI.svg";
+import NumPyLogo from "../assets/NumPy.svg";
+import TailwindLogo from "../assets/Tailwind-CSS.svg";
+import MySQLLogo from "../assets/MySQL.svg";
+import MatplotlibLogo from "../assets/Matplotlib.svg";
+import JavaScriptLogo from "../assets/JavaScript.svg";
+import ExternalLinkLogo from "../assets/externalLink.svg";
 
 export default function Home() {
 
@@ -33,7 +24,7 @@ export default function Home() {
     { icon: PythonLogo, title: "Python"},
     { icon: FastAPILogo, title: "FastAPI"},
     { icon: MySQLLogo, title: "MySQL"},
-    { icon: AWSLogo, title: "AWS"},
+    // { icon: AWSLogo, title: "AWS"},
   ];
 
   const dataSkills = [
@@ -46,239 +37,272 @@ export default function Home() {
     { icon: ReactLogo, title: "React"},
     { icon: TailwindLogo, title: "Tailwind"},
     { icon: JavaScriptLogo, title: "JavaScript"},
-    { icon: TypeScriptLogo, title: "TypeScript"},
-    { icon: D3Logo, title: "D3.js"},
+    // { icon: TypeScriptLogo, title: "TypeScript"},
+    // { icon: D3Logo, title: "D3.js"},
   ]
-
-
 
   return (
     <>
-    {/* Welcome Section */}
-    <div className="p-6 bg-[#31343d] text-white flex flex-col md:flex-row justify-center items-center pt-[70px] pb-[70px] gap-10">
-      
-      {/* Welcome Section - Text */}
-      <div className="flex flex-col gap-3 w-full">
-        <h1 className="text-5xl font-semibold mb-4"
-          style={{
-            color: "#f9fafb",
-            fontFamily: "'Geist', 'Inter', sans-serif",
-            letterSpacing: "-0.02em",
-          }}>Everett Lopez</h1>
-        <span className="text-3xl">Backend Engineer • Python | FastAPI | SQL | AWS</span>
+    <div className="flex flex-col px-6 md:px-12 pt-10 pb-20 gap-20">
 
-        {/* Click Logos and Resume */}
-        <div className="flex flex-row gap-5 items-center pt-3">
-          <a href="https://github.com/everettlopez" target="_blank" rel="noopener noreferrer"><img src={GitHubLogo} alt="GitHub Logo" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 
-                 rounded-full object-cover cursor-pointer 
-                 transition duration-200 hover:scale-110 hover:opacity-80" href=""/></a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/everettlopezjr"><img src={LinkedInLogo} alt="LinkedIn Logo" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 
-                 rounded-full object-cover cursor-pointer 
-                 transition duration-200 hover:scale-110 hover:opacity-80"/></a>
-          <a target="_blank" rel="noopener noreferrer" href="https://leetcode.com/u/everettlopezjr/"><img src={LeetCodeLogo} alt="LeetCode Logo" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 
-                 rounded-full object-cover cursor-pointer 
-                 transition duration-200 hover:scale-110 hover:opacity-80"/></a>
-          <span>or</span>
-          <a href="/Resume.pdf" download target="_blank" rel="noopener noreferrer"><button className="bg-gray-500 
-                 h-10 sm:h-11 md:h-12 
-                 px-3 sm:px-4 md:px-5 
-                 rounded-full 
-                 text-sm sm:text-base 
-                 hover:bg-gray-700 transition duration-300 
-                 hover:scale-105 hover:shadow-xl cursor-pointer">Download Resume</button></a>
-        </div>
-
+      {/* HEADER */}
+      <div className="flex items-end md:flex-row justify-center 
+                gap-5 text-gray-400 w-full px-4 md:justify-end md:gap-10">
+        <a className="tracking-wide text-base md:text-lg">CONTACT</a>
+        <a className="tracking-wide text-base md:text-lg">PORTFOLIO</a>
+        <a className="tracking-wide text-base md:text-lg">RESUME</a>
       </div>
 
-      <div className="flex justify-center items-center w-full">
-        <DotLottieReact
-          src="https://lottie.host/ff3c0e89-af15-4b69-a0bb-a4c9f4278687/fg2wRiqJN7.lottie"
-          loop
-          autoplay
-          className="w-70 h-70 sm:w-80 sm:h-80 md:w-100 md:h-100 lg:w-[500px] lg:h-[500px]"
+      {/* INTRODUCTION */}
+      <div className="flex min-h-[200px] md:min-h-[380px] items-end">
+        <TypeAnimation
+          sequence={[
+            "HELLO WORLD, I'M EVERETT",
+          ]}
+          speed={30}
+          repeat={0}
+          cursor={true}
+          className="text-4xl sm:text-5xl md:text-7xl font-light tracking-wide"
         />
       </div>
 
-    </div>
+      {/* HEADSHOT AND BRIEF SUMMARY */}
+      <div className="flex flex-col md:flex-row items-center justify-center 
+                gap-10 md:gap-20 py-10 md:py-10 w-full">
+        <img src={sampleHeadshot} className="h-[180px] w-[180px] sm:h-[200px] sm:w-[200px] md:h-[220px] md:w-[220px] 
+               object-cover rounded-2xl"/>
 
-    {/* About Section */}
-    <div className="bg-[#31343d] text-white 
-                px-6 sm:px-10 md:px-20 
-                py-16 sm:py-24 md:py-32">
-      {/* About Section - Text */}
-      <div className="flex flex-col gap-4 w-full md:w-2/3 lg:w-1/2">
-        <div class="h-1 w-16 bg-white"></div>
-        <span className="text-5xl font-semibold mb-4"
-          style={{
-            color: "#f9fafb",
-            fontFamily: "'Geist', 'Inter', sans-serif",
-            letterSpacing: "-0.02em",
-          }}>About Me</span>
-
-        <span className="text-base sm:text-lg md:text-xl leading-relaxed">Backend engineering-focused Computer Science student with hands-on experience in <span className="font-bold">FastAPI</span>, <span className="font-bold">Python</span>, <span className="font-bold">React</span>, and <span className="font-bold">TypeScript</span>. Skilled in building secure authentication systems, clean REST APIs, and reliable full-stack application flows. Known for debugging complex issues, maintaining clean project structure, and delivering modern, minimal UI implementations with Tailwind CSS.</span>
-        {/* <span className="text-base sm:text-lg md:text-xl pt-2 cursor-pointer hover:opacity-80 transition">Learn More</span> */}
-      </div>
-    </div>
-
-    {/* Skills Section */}
-    <div className="w-full bg-[#31343d] text-white py-[150px] flex flex-col items-center">
-
-      <div className="flex flex-col gap-3 w-[800pxpxpx] justify-center items-center">
-        <div className="flex-grow h-1 w-20 bg-white"></div>
-        <span className="text-5xl font-semibold mb-4"
-          style={{
-            color: "#f9fafb",
-            fontFamily: "'Geist', 'Inter', sans-serif",
-            letterSpacing: "-0.02em",
-          }}>Skills</span>
-
-        {/* Tab Buttons for Skills */}
-        <div className="flex gap-4 mb-10">
-          <button onClick={() => setActiveTab("backend")} className={`px-4 py-2 rounded-full ${activeTab === "backend" ? "bg-white text-black" : "bg-gray-600"}`}>Backend</button>
-          <button onClick={() => setActiveTab("data")} className={`px-4 py-2 rounded-full ${activeTab === "data" ? "bg-white text-black" : "bg-gray-600"}`}>Data Engineering</button>
-          <button onClick={() => setActiveTab("frontend")} className={`px-4 py-2 rounded-full ${activeTab === "frontend" ? "bg-white text-black" : "bg-gray-600"}`}>Frontend</button>
-        </div>
-        
-        <div className="flex flex-wrap gap-6 justify-center w-full">
-
-          {activeTab === "backend" && backendSkills.map((skill) => (
-            <SkillCard key={skill.title} icon={skill.icon} title={skill.title}/>
-          ))}
-
-          {activeTab === "data" && dataSkills.map((skill) => (
-            <SkillCard key={skill.title} icon={skill.icon} title={skill.title}/>
-          ))}
-
-          {activeTab === "frontend" && frontendSkills.map((skill) => (
-            <SkillCard key={skill.title} icon={skill.icon} title={skill.title}/>
-          ))}
-
+        <div className="flex flex-col gap-6 text-center md:text-left max-w-[90%] md:max-w-[600px]">
+          <p className="tracking-wider text-lg sm:text-xl">ASPIRING BACKEND ENGINEER WHO ENJOYS BUILDING SYSTEMS THAT FEEL SIMPLE, PREDICTABLE, AND DURABLE. I WORK WITH PYTHON, FASTAPI, AND SQL, WITH A GROWING INTEREST IN DISTRIBUTED SYSTEMS AND DATA-DRIVEN TOOLING.</p>
+          <div className="flex justify-center md:justify-start">
+            <a href="" className="w-fit"><p className="text-gray-400 border-b-2 text-lg">LEARN MORE</p></a>
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* Portfolio */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mx-auto 
-                p-3 bg-[#31343d] 
-                pt-16 sm:pt-24 md:pt-32 
-                pb-16 sm:pb-24 md:pb-32">
+      {/* RESUME / PORTFOLIO ACCORDION */}
+      <div className="flex flex-col w-full max-w-[800px] mx-auto mt-10 px-4">
+        <AccordionItem title="EDUCATION">
 
+          <div className="flex flex-col border border-gray-400 rounded-[10px] p-3">
+            <p className="text-gray-400 text-sm">UNIVERSITY</p>
 
-      {/* Card */}
-      <div className="bg-gray-700 rounded-lg flex flex-col 
-                  items-center justify-start 
-                  bg-cover bg-center 
-                  hover:bg-gray-700 transition duration-300 
-                  text-white gap-4 
-                  pt-10 sm:pt-14 md:pt-16 
-                  h-[400px] sm:h-[500px] md:h-[600px]">
-        <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Full-Stack Messaging Application</span>
-        <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
+            <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <p className="text-lg text-gray-600">The University of Utah</p>
+              <p className="text-gray-600">August 2021 - May 2027</p>
+            </div>
 
-        <div className="flex flex-row gap-4 pt-2">
-          <span className="bg-white 
-                       px-4 sm:px-5 md:px-6 
-                       py-2 sm:py-3 
-                       rounded-full flex items-center 
-                       text-black hover:bg-gray-300">Live Demo</span>
-          <Link to="/chat-express"><span className="bg-gray-700 
-                         px-4 sm:px-5 md:px-6 
-                         py-2 sm:py-3 
-                         rounded-full flex items-center 
-                         border-2 border-solid 
-                         hover:bg-white hover:text-black">Learn More</span></Link>
-        </div>
+            <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <p>B.S. in Software Development</p>
+              <p>GPA: 2.9</p>
+            </div>
+          </div>
+        </AccordionItem>
 
-        <div>
+        <AccordionItem title="EXPERIENCE">
+          <ExperienceItem 
+            employer="Kahlert School of Computing"
+            position="Undergraduate Research Assistant"
+            startDate="August 2025"
+            location="Salt Lake City, UT"
+            endDate="Current">
+              <li>Engineered Python-based cryptographic workflows to support provacy-preserving media provenance research, implementing hashing algorithms and polynomial commitment schemes.</li>
+              <li>Analyzed C2PA specifications and integrated cryptographic components into production-ready backend logic.</li>
+            </ExperienceItem>
+        </AccordionItem>
+
+        <AccordionItem title="PROJECTS">
+          <div className="flex flex-col gap-3">
+            <ProjectItem
+              title="Chat Express"
+              link1_title="GitHub"
+              link1="https://github.com/everettlopez/ChatExpress"
+              link2_title="YouTube"
+              link2="https://youtu.be/zKPDco1Z9J4?si=N9UJ8POkmOZLQuY8"
+              techStack="FastAPI - SQLModel - RestAPI Design - React - TypeScript"
+              semester="Spring 2026">
+                {/* Here */}
+                <div className="flex justify-center">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/zKPDco1Z9J4?si=6JhZUfzbkMzsqijs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className="rounded-[10px]"></iframe>
+                </div>
+
+                <div className="flex flex-col">
+                  <h2 className="text-lg tracking-wide text-gray-500">BACKEND ARCHITECTURE (FastAPI)</h2>
+                  <ul className="list-disc pl-5">
+                    <li>Modular Routers - Accounts, Chats, and Messages seperated for clean API boundaries and maintainability.</li>
+                    <li>Typed Request/Response Model - SQLModel + Pydantic validation ensures predictable data flow across the stack.</li>
+                    <li>Async Endpoints - Non-blocking I/O for message fetching and chat updates.</li>
+                    <li>Swagger-Driven Development - Auto-generated docs used for iterative endpoint testing.</li>
+                  </ul>
+                </div>
+
+                <div className="flex flex-col">
+                  <h2 className="text-lg tracking-wide text-gray-500">DATABASE LAYER (SQL Model + Relational Schema)</h2>
+                  <ul className="list-disc pl-5">
+                    <li>Normalized Relational Models — Users, Chats, Messages with explicit foreign keys.</li>
+                    <li>Automatic Table Generation — SQLModel handles schema creation without manual migrations for MVP.</li>
+                    <li>Efficient Query Patterns — Filtered message retrieval per chat; indexed lookups.</li>
+                    <li>Strong Typing Across DB + API — Same model definitions power both database and API validation.</li>
+                  </ul>
+                </div>
+
+                <div className="flex flex-col">
+                  <h2 className="text-lg tracking-wide text-gray-500">FRONTEND ARCHITECTURE (React + TypeScript)</h2>
+                  <ul className="list-disc pl-5">
+                    <li>Modular Routers - Accounts, Chats, and Messages seperated for clean API boundaries and maintainability.</li>
+                    <li>Typed Request/Response Model - SQLModel + Pydantic validation ensures predictable data flow across the stack.</li>
+                    <li>Async Endpoints - Non-blocking I/O for message fetching and chat updates.</li>
+                    <li>Swagger-Driven Development - Auto-generated docs used for iterative endpoint testing.</li>
+                  </ul>
+                </div>
+            </ProjectItem>
+
+            <ProjectItem
+              title="Spotify Genre Intelligence Dashboard"
+              link1_title="Website"
+              link1="https://dataviscourse2025.github.io/final-project-treblemakers/"
+              link2_title="YouTube"
+              link2="https://youtu.be/93Bo9WEG_w0?si=eocwShK1nYsc_DL2"
+              techStack="JavaScript - D3.js - Spotify Web API - Data Injestion"
+              semester="Fall 2025"></ProjectItem>
+
+            <ProjectItem
+              title="Fraudulent Behaviour in Mobile Transaction"
+              link1_title="Kaggle"
+              link1="https://www.kaggle.com/writeups/everettlopez/credit-fraud-eda"
+              techStack="Python - Pandas - NumPy - Matplotlib - Seaborn - StatsModel"
+              semester="Fall 2025">
+            </ProjectItem>
           
-        </div>
-
+          </div>
+        </AccordionItem>
       </div>
 
-      {/* Card */}
-      <div className="bg-gray-700 rounded-lg flex flex-col 
-                  items-center justify-start 
-                  bg-cover bg-center 
-                  hover:bg-gray-700 transition duration-300 
-                  text-white gap-4 
-                  pt-10 sm:pt-14 md:pt-16 
-                  h-[400px] sm:h-[500px] md:h-[600px] text-center">
-        <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Learning Management System (LMS)</span>
-        <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
-
-        <div className="flex flex-row gap-4 pt-2">
-          <span className="bg-white 
-                       px-4 sm:px-5 md:px-6 
-                       py-2 sm:py-3 
-                       rounded-full flex items-center 
-                       text-black hover:bg-gray-300">Live Demo</span>
-          <Link to="/lms-canvas" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
-                         px-4 sm:px-5 md:px-6 
-                         py-2 sm:py-3 
-                         rounded-full flex items-center 
-                         border-2 border-solid 
-                         hover:bg-white hover:text-black">Learn More</span></Link>
-        </div>
-        
-      </div>
-
-
-
-      {/* Card */}
-      <div className="bg-gray-700 rounded-lg flex flex-col 
-                  items-center justify-start 
-                  bg-cover bg-center 
-                  hover:bg-gray-700 transition duration-300 
-                  text-white gap-4 
-                  pt-10 sm:pt-14 md:pt-16 
-                  h-[400px] sm:h-[500px] md:h-[600px]">
-        <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Spotify Intelligence Dashboard</span>
-        <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
-
-        <div className="flex flex-row gap-4 pt-2">
-          <a href="https://youtu.be/93Bo9WEG_w0?si=a69XuwtJFgK6nAds" target="_blank" rel="noopener noreferrer"><span className="bg-white 
-                       px-4 sm:px-5 md:px-6 
-                       py-2 sm:py-3 
-                       rounded-full flex items-center 
-                       text-black hover:bg-gray-300">Live Demo</span></a>
-          <a href="https://dataviscourse2025.github.io/final-project-treblemakers/" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
-                         px-4 sm:px-5 md:px-6 
-                         py-2 sm:py-3 
-                         rounded-full flex items-center 
-                         border-2 border-solid 
-                         hover:bg-white hover:text-black">Website</span></a>
-        </div>
-      </div>
-
-      {/* Card */}
-      <div className="bg-gray-700 rounded-lg flex flex-col 
-                  items-center justify-start 
-                  bg-cover bg-center 
-                  hover:bg-gray-700 transition duration-300 
-                  text-white gap-4 
-                  pt-10 sm:pt-14 md:pt-16 
-                  h-[400px] sm:h-[500px] md:h-[600px] cursor-pointer">
-        <span className="text-2xl sm:text-3xl md:text-[32px] font-bold">Fraudlent Exploratory Data Analaysis (EDA)</span>
-        <span className="text-base sm:text-lg md:text-[20px]">Recreated system such as </span>
-
-        <div className="flex flex-row gap-4 pt-2">
-          <a href="https://www.kaggle.com/code/everettlopez/credit-fraud-eda" target="_blank" rel="noopener noreferrer"><span className="bg-white 
-                       px-4 sm:px-5 md:px-6 
-                       py-2 sm:py-3 
-                       rounded-full flex items-center 
-                       text-black hover:bg-gray-300">Learn More</span></a>
-          <a href="https://www.kaggle.com/writeups/everettlopez/credit-fraud-eda" target="_blank" rel="noopener noreferrer"><span className="bg-gray-700 
-                         px-4 sm:px-5 md:px-6 
-                         py-2 sm:py-3 
-                         rounded-full flex items-center 
-                         border-2 border-solid 
-                         hover:bg-white hover:text-black">Website</span></a>
-        </div>
-      </div>
 
     </div>
-
     </>
+  );
+}
+
+function ExperienceItem({employer, position, location, startDate, endDate, children}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="flex flex-col border border-gray-400 rounded-[10px] p-3">
+      <button
+        onClick={() => setOpen(!open)} 
+        className="flex justify-between items-center">
+        <span className="text-lg tracking-wider text-gray-600">{employer} | <span className="text-lg text-gray-400">{location}</span></span>
+
+        {/* Plus / Minus Icon */}
+        <span
+          className={`
+            text-gray-300 text-2xl transition-transform duration-300
+            ${open ? "rotate-45" : ""}
+          `}
+        >
+          +
+        </span>
+      </button>
+
+      <div className="flex justify-between items-center">
+        <p className="tracking-wider text-gray-400">{position}</p>
+        <p className="tracking-wider text-gray-400">{startDate} - {endDate}</p>
+      </div>
+
+      {/* Content */}
+      <div className={`
+          overflow-hidden transition-all duration-300
+          ${open ? "max-h-[500px] mt-3" : "max-h-0"}
+        `}>
+          <div className="text-gray-400 tracking-wide leading-relaxed py-2">
+            <ul className="list-disc pl-5 space-y-1">
+              {children}
+            </ul>
+          </div>
+      </div>
+      
+    </div>
+  );
+}
+
+function AccordionItem({ title, children }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border-b border-gray-700 py-4">
+      {/* Header */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between text-left"
+      >
+        <span className="text-xl tracking-wide text-black">
+          {title}
+        </span>
+
+        {/* Plus / Minus Icon */}
+        <span
+          className={`
+            text-gray-300 text-2xl transition-transform duration-300
+            ${open ? "rotate-45" : ""}
+          `}
+        >
+          +
+        </span>
+      </button>
+
+      {/* Content */}
+      <div
+        className={`
+          overflow-hidden transition-all duration-300
+          ${open ? "mt-3" : "max-h-0"}
+        `}
+      >
+        <div className="text-gray-400 tracking-wide leading-relaxed py-5">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProjectItem({title, link1_title, link2_title, link1, link2, techStack, semester, children}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="flex flex-col border border-gray-400 rounded-[10px] p-3">
+      <button
+        onClick={() => setOpen(!open)} 
+        className="flex justify-between items-center">
+        <span className="text-lg tracking-wider text-gray-600">{title} | <a href={link1} target="_blank" rel="noopener noreferrer"><span className="text-lg text-gray-400 hover:text-gray-500">{link1_title}</span></a> <a href={link2} target="_blank" rel="noopener noreferrer"><span className="text-lg text-gray-400 hover:text-gray-500">{link2_title}</span></a></span>
+
+        {/* Plus / Minus Icon */}
+        <span
+          className={`
+            text-gray-300 text-2xl transition-transform duration-300
+            ${open ? "rotate-45" : ""}
+          `}
+        >
+          +
+        </span>
+      </button>
+
+      <div className="flex justify-between items-center">
+        <p className="tracking-wider text-gray-400">{techStack}</p>
+        <p className="tracking-wider text-gray-400">{semester}</p>
+      </div>
+
+      {/* Content */}
+      <div className={`
+          overflow-hidden transition-all duration-300
+          ${open ? "max-h-fit mt-3" : "max-h-0"}
+        `}>
+          <div className="text-gray-400 tracking-wide leading-relaxed py-2 flex flex-col gap-5">
+            {children}
+          </div>
+      </div>
+      
+    </div>
   );
 }
 
