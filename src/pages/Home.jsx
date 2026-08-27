@@ -2,8 +2,6 @@ import { TypeAnimation } from 'react-type-animation';
 
 import React from 'react';
 import { useState } from "react";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import { Link } from "react-router-dom";
 import sampleHeadshot from "../assets/sample_headshot.jpg";
 import PythonLogo from "../assets/Python.svg";
 import PandasLogo from "../assets/Pandas.svg";
@@ -14,7 +12,8 @@ import TailwindLogo from "../assets/Tailwind-CSS.svg";
 import MySQLLogo from "../assets/MySQL.svg";
 import MatplotlibLogo from "../assets/Matplotlib.svg";
 import JavaScriptLogo from "../assets/JavaScript.svg";
-import ExternalLinkLogo from "../assets/externalLink.svg";
+import resumeFile from "../assets/Everett_Resume.pdf";
+
 
 export default function Home() {
 
@@ -48,9 +47,57 @@ export default function Home() {
       {/* HEADER */}
       <div className="flex items-end md:flex-row justify-center 
                 gap-5 text-gray-400 w-full px-4 md:justify-end md:gap-10">
-        <a className="tracking-wide text-base md:text-lg">CONTACT</a>
-        <a className="tracking-wide text-base md:text-lg">PORTFOLIO</a>
-        <a className="tracking-wide text-base md:text-lg">RESUME</a>
+        <div className="relative group">
+          <a className="tracking-wide text-base md:text-lg cursor-pointer">
+            CONTACT
+          </a>
+
+          <div
+            className="
+              absolute left-0 mt-2 w-auto
+              bg-white shadow-lg rounded-md
+              opacity-0 group-hover:opacity-100
+              pointer-events-none group-hover:pointer-events-auto
+              transition
+            "
+          >
+            <div className="flex flex-col p-3 text-sm tracking-wide">
+              <a href="mailto:youremail@example.com" className="py-2 hover:text-gray-600 text-lg">
+                everettlopezsr@gmail.com
+              </a>
+              <a href="tel:8183702618" className="py-2 hover:text-gray-600 text-lg">
+                <p>+1 (818) 370-2618</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="relative group">
+          <a className="tracking-wide text-base md:text-lg cursor-pointer">
+            SOCIALS
+          </a>
+
+          <div
+            className="
+              absolute left-0 mt-2 w-auto
+              bg-white shadow-lg rounded-md
+              opacity-0 group-hover:opacity-100
+              pointer-events-none group-hover:pointer-events-auto
+              transition
+            "
+          >
+            <div className="flex flex-col p-3 text-sm tracking-wide">
+              <a href="" className="py-2 hover:text-gray-600 text-lg">
+                GitHub
+              </a>
+              <a href="" className="py-2 hover:text-gray-600 text-lg">
+                <p>LinkedIn</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href={resumeFile} download="Everett_Resume.pdf" className="tracking-wide text-base md:text-lg hover:text-gray-500">RESUME</a>
       </div>
 
       {/* INTRODUCTION */}
@@ -75,7 +122,7 @@ export default function Home() {
         <div className="flex flex-col gap-6 text-center md:text-left max-w-[90%] md:max-w-[600px]">
           <p className="tracking-wider text-lg sm:text-xl">ASPIRING BACKEND ENGINEER WHO ENJOYS BUILDING SYSTEMS THAT FEEL SIMPLE, PREDICTABLE, AND DURABLE. I WORK WITH PYTHON, FASTAPI, AND SQL, WITH A GROWING INTEREST IN DISTRIBUTED SYSTEMS AND DATA-DRIVEN TOOLING.</p>
           <div className="flex justify-center md:justify-start">
-            <a href="" className="w-fit"><p className="text-gray-400 border-b-2 text-lg">LEARN MORE</p></a>
+            <a href={resumeFile} download="Everett_Resume.pdf" className="w-fit"><p className="text-gray-400 border-b-2 text-lg hover:text-gray-500 hover:border-gray-500">DOWNLOAD RESUME</p></a>
           </div>
         </div>
       </div>
