@@ -62,7 +62,7 @@ export default function Home() {
             "
           >
             <div className="flex flex-col p-3 text-sm tracking-wide">
-              <a href="mailto:youremail@example.com" className="py-2 hover:text-gray-600 text-lg">
+              <a href="mailto:everettlopezsr@gmail.com" className="py-2 hover:text-gray-600 text-lg">
                 everettlopezsr@gmail.com
               </a>
               <a href="tel:8183702618" className="py-2 hover:text-gray-600 text-lg">
@@ -88,10 +88,10 @@ export default function Home() {
             "
           >
             <div className="flex flex-col p-3 text-sm tracking-wide">
-              <a href="" className="py-2 hover:text-gray-600 text-lg">
+              <a href="https://github.com/everettlopez" className="py-2 hover:text-gray-600 text-lg">
                 GitHub
               </a>
-              <a href="" className="py-2 hover:text-gray-600 text-lg">
+              <a href="https://www.linkedin.com/in/everettlopezjr/" className="py-2 hover:text-gray-600 text-lg">
                 <p>LinkedIn</p>
               </a>
             </div>
